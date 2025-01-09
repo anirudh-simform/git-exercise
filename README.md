@@ -129,3 +129,29 @@ git pull
 git tag -a v1.0 -m"Version 1.0"
 git push origin v1.0
 ```
+
+## Create 2 another branch (3rd and 4th) from develop, push read me changes to 3rd brach.
+
+```
+git checkout -b readme-draft develop
+git checkout -b readme-final develop
+
+git switch readme-draft
+
+git add README.md
+git commit -m"Write the first draft of README
+git push -u origin readme-draft
+```
+
+## Cherry pick 3rd branch's commit to 4th branch.
+
+`
+git cherry-pick b8910a5cd14ce594c3eaaff8b620a3fec6144a9e
+`
+
+## Change commit message in 4th branch
+
+`
+git commit --amend
+`
+
